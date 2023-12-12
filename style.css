@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans:ital@1&family=Nova+Square&display=swap');
+
+:root{
+    --primary-color:#a855f7;
+    --primary-color-dark:#9333ea;
+    --secndary-color:#ca8a04;
+    --text-dark:black;
+    --text-light:grey;
+    --extra-light:#faf5ff;
+    --max-width:1200px;
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "poppins",sans-serif;
+}
+
+nav{
+    width: 100%;
+    position:fixed;
+    top: 0;;
+    left: 0;
+    background-color: rgb(158, 208, 251);
+    z-index: 99;
+}
+.nav__content{
+    max-width:var(--max-width);
+    margin:auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav.logo a{
+    font-size: 7rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    transition: 3s;
+
+}
+nav .logo a:hover{
+    color: var(--primary-color-dark);
+
+}
+
+nav .checkbox{
+    display: none;
+
+}
+
+nav input{
+    display: none;
+}
+nav .checkbox  i{
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    transition: left 0.3s;
+    list-style: none;
+
+}
+ul li a{
+    padding-left:8px 12px ;
+ border: 2px solid transparent;
+ text-decoration: none;
+ font-weight: 600;
+ color: var(--text-dark);
+ transition: 0.3s;
+
+}
+ul li a:hover{
+    border-color: var(--secndary-color);
+    border-bottom-color:var(--secndary-color)  ;
+    color: var(--secndary-color);
+
+}
+.section{
+    background-color: var(--extra-light);
+}
+.section__container{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+}
+
+.content{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding-top: 150px;
+    margin-top: 50px;
+
+}
+.subtitle{
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-left: 30px;
+
+}
+.title span{
+    font-weight: 600;
+    margin-top: 60px;
+    margin-left: 20px;
+
+}
+.discription{
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 10rem;
+    margin-left: 20px;
+    margin-top: -13%;
+
+}
+.action__btns{
+    display: flex;
+    gap: 1rem;
+
+}
+.action_btns button{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+
+
+}
+.hire__me{
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+}
+.hire__me:hover{
+    background-color: var(--primary-color-dark);
+}
+.portfolio{
+    color: var(--primary-color);
+}
+.portfolio:hover{
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
+
+}
+image{
+    display:grid;
+    place-items: center;
+    padding: 30px;;
+    margin-top: 50px;
+    height: 50%;
+    width: 50%;
+    
+
+}
+.image img{
+    width: min(20rem,87%);
+    border-radius: 20%;
+    float: inline-end;
+    margin-right: 13%;
+    }
+#contact{
+    background-color: black;
+    height: 30vh;
+    color: #ffffff;
+}
+@media (width < 750px){
+    nav .checkbox{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100px;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85%;
+        background-color: var(white);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+    ul li a{
+        font-size:20px;
+
+    }
+    .section__container{
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .image{
+        grid-area: 1/1/2/2;
+    }
+    .action_btns{
+        margin: auto;
+
+    }
+    image img{
+        width: min(10rem,57%);
+        border-radius:10%;
+
+    }
+    .discription{
+        line-height: 1.5rem;
+        color: var(--text-light);
+        margin-bottom: 10rem;
+        margin-left: 20px;
+        margin-top: 0%;
+    }
+
+
+}
+
